@@ -1,0 +1,45 @@
+display all
+	is owner
+	not deleted
+	not send
+
+display trash
+	is owner
+	is deleted
+
+display send
+	is owner
+	is send
+
+modifyold 
+	is owner
+	not deleted
+	not send
+
+delete
+	is owner
+	not deleted
+	not send
+
+undelete
+	is owner
+	is deleted
+
+send
+	is owner
+	not deleted
+	not send
+
+unsend
+	is owner
+	is send
+
+delete ever
+	is owner
+	is deleted
+
+
+
+
+
+

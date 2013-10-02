@@ -1,0 +1,174 @@
+#accessory {
+	height:4em;
+	width:100%;
+}
+
+
+#bureauname{
+	height:100px;
+	width:100%;
+	font-size:30px;
+	font-weight:bold;
+	color:#f00;
+	text-align:center;
+}
+
+hr {
+	width:100%;
+	color: #000;
+}
+
+#ohr {
+	height:1px;
+	color: #f00;
+}
+
+#inactive {
+	color: #666;
+}
+
+#oaccessoryt{
+	margin-top:5px;
+	margin-bottom:5px;
+	float:left;
+	text-align:left;
+	white-space:nowrap;
+}
+
+#oaccessoryi{
+	margin-top:5px;
+	margin-bottom:5px;
+	width:94%;
+	float:right;
+	text-align:left;
+}
+
+#ocontent {
+	height:100%;
+	width:100%;
+	overflow:hidden;
+}
+
+#ohidden{
+	display:none;
+}
+
+#oinput{
+	border:#000 1px none;
+	vertical-align:middle;
+}
+
+#oinput:hover{
+	background-color: #ccc;
+}
+
+#officepage{
+	width:70%;
+	padding: 15px 5% 5% 5%;
+	background-color:#fff;
+	border:1px solid;
+	border-color:#ccc #000 #000 #ccc;
+}
+
+#otitle{
+	font-size:12px;
+	color: #fff;
+	margin:8px 0 8px 0;
+}
+
+#oftitle{
+	width:80%;
+	font-size:20px;
+	font-weight:bold;
+	text-align:center;
+}
+
+#osetreceb {
+	margin:5px;
+	width:8em;
+	border:#ccc 2px outset;
+	text-align:center;
+	cursor:hand;
+}
+
+#osetreceivers{
+	width:18em;
+	height:40em;
+	text-align:left;
+}
+
+#osetreceivers option{
+	text-align:left;
+}
+
+#otrbgcolor1 {
+	background-color:#fff;
+}
+
+#otrbgcolor2 {
+	background-color:#fff;
+}
+
+#owarn {
+	color:#f00;
+	font-size:1.2em;
+}
+
+#pagecenter{
+	padding:5px;
+}
+
+#pageleft{
+	margin-top:2px;
+	margin-bottom:5px;
+	clear:both;
+	text-align:left;
+}
+
+#pageright{
+	padding:5px;
+	text-align:right;
+	clear:both;
+}
+
+#pleft{
+	float:left;
+	width:auto;
+}
+
+#pright{
+	float:right;
+	width:auto;
+}
+
+#pinline{
+	padding:3px;
+	vertical-align:middle;
+}
+
+select {
+	vertical-align:middle;
+}
+
+select:hover{
+	background-color: #ccc;
+}
+
+textarea {
+	text-align:left;
+	padding:5px;
+	border: #000 0 none;
+	overflow:auto;
+}
+
+textarea:hover{
+	background-color: #ccc;
+}
+
+textarea:focus{
+	background-color: #ccc;
+}
+
+ul#nobgc li, ul#nobgc li a{ /*viewoffice table> td> li> bgcolor*/
+	background-color:transparent;
+}

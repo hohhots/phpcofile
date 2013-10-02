@@ -1,0 +1,97 @@
+<script language="javascript">
+<!--
+	function resetta(ta,rows){
+		ta.rows = rows;
+		while(ta.clientHeight < ta.scrollHeight){
+			ta.rows++;
+		}
+	}
+-->
+</script>
+<!-- BEGIN block1 -->
+<div id="otitle">-- {notice} --</div>
+<div class="action">
+	<ul>
+   		<li>{preview}</li>
+   		<li>{rewrite}</li>
+   	</ul>
+</div>
+<form id="onotice" name="onotice" method="post" action="{action}">
+<div id="officepage">
+	<div id="pageright">
+		<select  name="secretlevel">
+              	 	<!-- BEGIN block11 -->
+				<option value="{value}" {s}>{value}</option>
+			<!-- END block11 -->
+           	</select>
+		<span id="pinline">¡ï</span>
+		<input id="oinput" name="lasttime" type="text" value="{lasttime}" size="5" maxlength="4" />
+		<select  name="yearmonth">
+              	   <!-- BEGIN block12 -->
+				<option value="{value}" {s}>{value}</option>
+			   <!-- END block12 -->
+		</select>
+	</div>
+	<div id="pageright">
+		<select  name="urgencydegree">
+            		 <!-- BEGIN block13 -->
+			<option value="{value}" {s}>{value}</option>
+			 <!-- END block13 -->
+        	</select>
+	</div>
+	<div id="pagecenter"></div>
+	<textarea id="bureauname" name="bureauname" cols="50" rows="4">{bureauname}</textarea>
+	<div id="pagecenter"></div>
+	<div id="pagecenter">
+		<input id="oinput" name="agencyname" type="text"  value="{agencyname}" size="13" />
+		<span id="pinline">[</span><input id="oinput" name="year" type="text"  value="{year}" size="3" maxlength="4" /><span id="pinline">]</span>
+		&nbsp;<input id="oinput" name="ordernum" type="text"  value="{ordernum}" size="3" maxlength="4" /><span id="pinline">{hao}</span>
+	</div>
+	<div id="pagecenter">
+	  <hr id="ohr" size="1px" color="#ff0000">
+	</div>
+	<textarea id="oftitle" name="title"  cols="50" rows="3">{title}</textarea>
+	<div id="pagecenter"></div>
+	<textarea id="ocontent" rows="20" name="content" onclick="resetta(this,20)" onkeypress="resetta(this,20)">{content}</textarea>
+	<div id="pagecenter"></div>
+	<div id="pageleft">
+		<div id="oaccessoryt">{fujian}</div>
+		<div id="oaccessoryi">
+			<textarea id="accessory" name="accessories"  cols="50" rows="3">{accessories}</textarea>
+		</div>
+	</div>
+	<div id="pageright">
+		<input id="oinput" name="validatetime" type="text"  value="{validatetime}"  size="20" />
+	</div>
+	<div id="pageleft">
+		<span id="pinline">£¨</span><input id="oinput" name="annotation" type="text"  value="{annotation}" size="50" />
+		<span id="pinline">£©</span>
+	</div>
+	<div id="pageleft">
+		<hr size="1px" color="#000000">
+		<span id="pinline">{zhutici}</span><input id="oinput" name="keywords" type="text"  value="{keywords}"  size="50" />
+	</div>
+	<div id="pageleft">
+		<hr size="1px" color="#000000">
+		<span id="pinline">{chaosong}</span><input id="oinput" name="sendnames" type="text"  value="{sendnames}"  size="50" />
+	</div>
+	
+	<div id="pageleft"> 
+	  	<hr size="1px" color="#000000">
+	  	<div id="pleft"><input id="oinput" name="printbureau" type="text" value="{printbureau}" size="20" /></div>
+	  	<div id="pright"><input id="oinput" name="printdate" type="text" value="{printdate}" size="13" /><span id="pinline">{yinfa}</span></div>
+	</div>
+	
+	<div id="divsetlineright">
+		&nbsp;
+	</div>
+</div>
+</form>
+<div class="action">
+	<ul>
+   		<li>{preview}</li>
+   		<li>{rewrite}</li>
+   	</ul>
+</div>
+<!-- END block1 -->
+<!-- ########################### -->

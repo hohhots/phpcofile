@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN" xml:lang="zh_CN">
+<!--
+ * file name head1.html
+ * Created on 15-Jan-06
+ *
+ * To change the template for this generated file go to
+ * Window - Preferences - PHPeclipse - PHP - Code Templates
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<!-- BEGIN head1 -->
+<title>{doctitle}</title>
+{searchscript}
+<link href="templates/css/xxbfile.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="hiddens">{doctitle}</div>
+<div id="headbg">
+	<p id="logo">{username}</p>
+</div>
+<div id="menu">
+	<div class="menuwidth">
+		<ul>
+    		<!-- BEGIN head1col1 -->
+    		<li {menuclass}>{menu}</li>
+    		<!-- END head1col1 -->
+		</ul>
+	</div>
+	<p class="rsearch1">{date}</p>
+</div>
+<!-- END head1 -->
+<!-- BEGIN head2 -->
+<form name="searchform" method="post" action="{searchac}">
+<div id="menu">
+	<div class="menuwidth">
+		<ul>
+			<!-- BEGIN head2col1 -->
+			<li {submenuclass}>{submenu}</li>
+			<!-- END head2col1 -->
+		</ul>
+	</div>
+	<p class="rsearch2">&nbsp;<input name="keyword" type="text" size="20" maxlength="50" id="searchinput" /> <a href="#" onclick="allsubmit(searchform)">{search}</a></p>
+</div>
+</form>
+<!-- END head2 -->

@@ -1,0 +1,2 @@
+1、如有需要(比如更改了http.conf文件里的php扩展名)，必须重命名 index.php文件的扩展名(像.phtml等)。
+2、如果你执行了第一步，用编辑器打开原名为index.php的文件，更改$globalFileExt的值.php(像.phtml等)。设置$globalSettingsXml的值(如/opt等，千万不要放在DocumentRoot所指定的目录或其子目录下)。

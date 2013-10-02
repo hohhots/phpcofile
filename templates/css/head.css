@@ -1,0 +1,200 @@
+* { 
+	font-size:12px;
+	font-family: ËÎÌו,verdana;
+	padding: 0; 
+	margin:0 auto; 
+	text-align:center;
+	color:#000;
+	text-decoration: none;
+}
+
+body { 
+	background-color:#6B86A3;
+}
+
+li, li a {
+	text-decoration: none;
+	display:block;
+	background-color:#ccc;
+}
+
+li a:hover {
+	text-decoration: none;
+}
+
+li:hover {
+	background-color:#dfdfdf;
+}
+
+ul{
+	list-style:none;
+}
+
+.action,
+.lilogin {
+	height:2.25em;
+	margin:10px auto;
+	width:80%;
+}
+
+.lilogin {
+	width:17em;
+}
+
+.action li,
+.action li a,
+.lilogin li,
+.lilogin li a {
+	width:6em;
+	float:left;
+	display:inline;
+}
+
+.action li {
+	margin: 0 1em;
+}
+
+.action li a:hover,
+.lilogin li a:hover{
+	background-color:#ddd;
+}
+
+.lilogin li{
+	margin-left: 2em;
+}
+
+.biborder { //draw button inner border
+	border-top:#eee 1px solid;
+	border-right:#666 1px solid;
+	border-bottom:#666 1px solid;
+	border-left:#eee 1px solid;
+	padding-bottom:1px;
+}
+
+.boborder{ //draw button outer border
+	border-top:#ddd 1px solid;
+	border-right:#333 1px solid;
+	border-bottom:#333 1px solid;
+	border-left:#ddd 1px solid;
+	line-height:2em;
+	padding-top:1px;
+}
+
+.delete{
+	color:#f00;
+}
+
+.disable{
+	color:#666;
+}
+
+#headbg { 
+	height:57px; 
+	background:url(../images/headbg.jpg); 
+	border-bottom:1px #600 solid;
+}
+
+.hiddens{
+	display:none;
+}
+
+input {
+	padding:2px;
+	text-align:left;
+	border: #000 1px solid ;
+}
+
+input:hover{
+	background-color: #eee;
+}
+
+.logininput {
+	margin-bottom:10px;
+}
+
+#ahref:hover, #ahref a:hover {
+	background-color:#ccc;
+}
+
+.href, .lhref{
+	padding-top:6px;
+	padding-bottom:6px;
+}
+
+.lhref{
+	padding-left:5px;
+	text-align:left;
+}
+
+#logo {
+	padding:18px 35px 15px 0; 
+	line-height:2em; 
+	text-align:right;
+	color:#fff;
+	background:url(../images/head.jpg) no-repeat; 
+}
+
+#menu {
+	height:27px; 
+	background:url(../images/navbg.jpg) repeat-x;
+}
+
+.menuwidth { 
+	margin:0 0 0 20px; 
+}
+
+.menuwidth li, .menuwidth li a {
+	height:27px;
+	line-height: 27px;
+	width:6em;
+	float:left;
+	background-color:transparent;
+}
+
+.menuwidth li {
+	margin: 0 0.15em;
+}
+
+.menuwidth li a:hover {
+	color:#FFF;
+	height:27px;
+	background:url(../images/currentbg.jpg) center no-repeat;
+}
+
+.menuwidth .libg { 
+	color:#fff; 
+	width:6em;
+	height:27px;
+	line-height: 27px;
+	background:url(../images/currentbg.jpg) center no-repeat;
+}
+
+#foot { 
+	padding:1em 0 1em 0; 
+	color:#fff; 
+	line-height:1.5em; 
+	background:url(../images/foottopline.jpg) repeat-x;
+	background-color:#567392;
+}
+
+.rsearch1, .rsearch2 {
+	line-height:27px;
+	line-height:27px;
+	float:right;
+	margin-right:20px;
+	clear:right;
+}
+
+.rsearch2 {display:none;}
+
+#searchinput {
+	margin-top:2px;
+}
+
+.trtitles{
+	background-color:#ccc;
+}
+
+.trnofile{
+	background-color:#fff;
+}

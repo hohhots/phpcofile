@@ -1,0 +1,97 @@
+<div id="otitle">-- {notice} --</div>
+<div class="action">
+	<ul>
+   		<li>{save}</li>
+   		<li>{modify}</li>
+   	</ul>
+</div>
+<!-- BEGIN block1 -->
+<div id="ohidden">
+	<form id="savefile" name="savefile" method="post" action="{actionputin}">
+		<input name="secretlevel" type="text" value="{secretlevelh}" />
+		<input name="lasttime" type="text" value="{lasttime}" />
+		<input name="yearmonth" type="text" value="{yearmonthh}" />
+		<input name="urgencydegree" type="text" value="{urgencydegreeh}" />
+		<input name="bureauname" type="text" value="{bureauname}" />      
+  		<input name="agencyname" type="text"  value="{agencyname}" />
+  		<input name="year" type="text"  value="{year}" />
+  		<input name="ordernum" type="text"  value="{ordernum}" />
+		<input name="title" type="text" value="{title}" />
+		<textarea  name="content">{content}</textarea>
+		<textarea  name="accessories">{accessories}</textarea>
+   		<input name="accessories" type="text"  value="{accessories}" />
+		<input name="validatetime" type="text"  value="{validatetime}" />
+		<input name="annotation" type="text"  value="{annotation}" />
+		<input name="keywords" type="text"  value="{keywords}" />
+		<input name="sendnames" type="text"  value="{sendnames}" />
+		<input name="printbureau" type="text" value="{printbureau}" />
+		<input name="printdate" type="text" value="{printdate}" />
+	</form>
+</div>
+<div id="ohidden">
+	<form id="modifyfile" name="modifyfile" method="post" action="{actionmodify}">
+		<input name="secretlevel" type="text" value="{secretlevelh}" />
+		<input name="lasttime" type="text" value="{lasttime}" />
+		<input name="yearmonth" type="text" value="{yearmonthh}" />
+		<input name="urgencydegree" type="text" value="{urgencydegreeh}" />
+		<input name="bureauname" type="text" value="{bureauname}" />      
+   		<input name="agencyname" type="text"  value="{agencyname}" />
+   		<input name="year" type="text"  value="{year}" />
+   		<input name="ordernum" type="text"  value="{ordernum}" />
+		<input name="title" type="text" value="{title}" />
+   		<textarea  name="content">{content}</textarea>
+		<textarea  name="accessories">{accessories}</textarea>
+		<input name="validatetime" type="text"  value="{validatetime}" />
+		<input name="annotation" type="text"  value="{annotation}" />
+		<input name="keywords" type="text"  value="{keywords}" />
+		<input name="sendnames" type="text"  value="{sendnames}" />
+		<input name="printbureau" type="text" value="{printbureau}" />
+		<input name="printdate" type="text" value="{printdate}" />
+
+	</form>
+</div>
+<div id="officepage">
+	<div id="pageright">
+			<span id="pinline">{secretlevel}{star}{lasttime}{ge}{yearmonth}</span>
+	</div>
+	<div id="pageright">
+		{urgencydegree}
+	</div>
+	<div id="pagecenter"></div>
+	<div id="pagecenter">
+      		<span id="bureauname">{bureauname}</span>
+    	</div>
+    	<div id="pagecenter"></div>
+    	<div id="pagecenter">
+		<sapn id="pinline">{agencyname}&nbsp;[{year}]&nbsp;{ordernum}{hao}</sapn>
+	</div>
+	<div id="pagecenter"><hr id="ohr" size="1px" color="#ff0000"></div>
+	<div id="pagecenter"><span  id="oftitle">{title}</span></div>
+	<div id="pagecenter"></div>
+	<div id="pageleft">{content}</div>
+	<div id="pagecenter"></div>
+	<div id="pageleft">
+		<div id="oaccessoryt">{accessories1}</div>
+		<div id="oaccessoryi">{accessories}</div>
+	</div>
+	<div id="pageright">{validatetime}</div>
+	<div id="pageleft">{leftp}{annotation}{rightp}{divleftright1}</div>
+	<div id="pageleft">{keywordshr}</div>
+	<div id="pageleft"><div id="oaccessoryt">{keywords1}</div><div id="oaccessoryi">{keywords}</div></div>
+	<div id="pageleft">{sendnameshr}</div>
+	<div id="pageleft"><div id="oaccessoryt">{sendnames1}</div><div id="oaccessoryi">{sendnames}</div></div>
+	<div id="pageleft"><hr size="1px" color="#000000" width="100%" /></div>
+	<div id="pageleft"> 
+	  	<div id="pleft">{printbureau}</div>
+	  	<div id="pright">{printdate}&nbsp;{yinfa}</div>
+	</div>
+	<div id="pagecenter"></div>
+</div>
+<!-- END block1 -->
+<div class="action">
+	<ul>
+   		<li>{save}</li>
+   		<li>{modify}</li>
+   	</ul>
+</div>
+

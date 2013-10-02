@@ -1,0 +1,61 @@
+<!-- BEGIN block0 -->
+{viewscript}
+<div id="otitle">-- {typetitle} --</div>
+<div class="action">
+	<ul>
+   		<li>{newvalue}</li>
+   	</ul>
+</div>
+<ul id="nobgc">
+<table width="80%" border="0"  cellspacing="1">
+	<tr class="trtitles">
+		<td class="href">{ltitle}</td>
+		<td width="40">{lofficetype}</td>
+		<td width="40">{lurgencydegree}</td>
+		<td width="90">{lpubtime}</td>
+		<td colspan="3">{ledit}</td>
+	</tr>
+	<!-- BEGIN block01 -->
+	<tr id="{trbgcolor}">
+		<td id="ahref"><li>{title}</li></td>
+		<td>{officetype}</td>
+		<td>{urgencydegree}</td>
+		<td>{pubtime}</td>
+		<td width="45" id="ahref"><li>{send}</li></td>
+		<td width="45" id="ahref"><li>{edit}</li></td>
+		<td width="45" id="ahref"><li>{delete}</li></td>
+	</tr>
+	<!-- END block01 -->
+	<!-- BEGIN block02 -->
+	<tr class="trnofile">
+		<td colspan="7" class="href">{noofficefile}</td>
+	</tr>
+	<!-- END block02 -->
+</table></ul>
+<div class="action">
+	<ul>
+   		<li>{newvalue}</li>
+   	</ul>
+</div>
+<!-- END block0 -->
+<!-- BEGIN block1 -->
+<br/>
+<ul id="nobgc">
+<table  width="80%" border="0" cellspacing="1">
+	<tr class="trtitles">
+		<td colspan="3" class="href">{select}</td>
+	</tr>
+	<tr class="trtitles">
+		<td width="30" class="href">{idname}</td>
+		<td width="70">{namename}</td>
+		<td>{descriptionname}</td>
+	</tr>
+	<!-- BEGIN block1tr -->
+	<tr  id="{trbgcolor}">
+		<td>{id}</td>
+		<td id="ahref"><li>{name}</li></td>
+		<td><div class="lhref">{description}</div></td>
+	</tr>
+	<!-- END block1tr -->
+</table></ul><br />
+<!-- END block1 -->

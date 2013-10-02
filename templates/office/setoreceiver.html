@@ -1,0 +1,178 @@
+<script language="JavaScript">
+<!-- Begin
+var stored = false;
+var fixList1name;
+var fixList1Values;
+var fixList2name;
+var fixList2Values;
+
+
+function storeFixListValue(srcList, destList){
+	if(stored == false){
+		fixList1name = srcList.name;
+		fixList1Values = new Array(srcList.options.length);
+		var len = 0;
+  		for( len = 0; len < srcList.options.length; len++ ){
+    		if ( srcList.options[ len ] != null ){
+     		 	fixList1Values[ len ] = new Option( srcList.options[ len ].text, srcList.options[ len ].value, srcList.options[ len ].defaultSelected, srcList.options[ len ].selected );
+    		}
+  		}
+		
+		fixList2name = destList.name;
+		fixList2Values = new Array(destList.options.length);
+		var len = 0;
+		for( len = 0; len < destList.options.length; len++ ){
+    		if ( destList.options[ len ] != null ){
+      			fixList2Values[ len ] = new Option( destList.options[ len ].text, destList.options[ len ].value, destList.options[ len ].defaultSelected, destList.options[ len ].selected );
+   		 	}
+  		}
+		
+		stored = true;
+	}
+}
+
+function  restoreListValue(srcList, destList){
+	storeFixListValue(srcList, destList);
+	
+	var z = srcList.length;
+	for ( var i = 0; i < z; i++ ){
+		srcList.options[0] = null;
+	}
+	z = destList.length;
+	for ( var i = 0; i < z; i++ ){
+		destList.options[0] = null;
+	}
+
+	if(srcList.name == fixList1name){
+		for ( var i = 0; i < fixList1Values.length; i++ ){
+			if ( fixList1Values[ i ] != null ){
+				srcList.options[ i ] = fixList1Values[ i ];
+			}
+		}
+		for ( var i = 0; i < fixList2Values.length; i++ ){
+			if ( fixList2Values[ i ] != null ){
+				destList.options[ i ] = fixList2Values[ i ];
+			}
+		}
+	}else{
+		for ( var i = 0; i < fixList1Values.length; i++ ){
+			if ( fixList1Values[ i ] != null ){
+				destList.options[ i ] = fixList1Values[ i ];
+			}
+		}
+		for ( var i = 0; i < fixList2Values.length; i++ ){
+			if ( fixList2Values[ i ] != null ){
+				srcList.options[ i ] = fixList2Values[ i ];
+			}
+		}
+	}
+	srcList.sort( compareOptionValues );
+	destList.sort( compareOptionValues );
+}
+
+function compareOptionValues(a, b){ 
+  // Radix 10: for numeric values
+  // Radix 36: for alphanumeric values
+  var sA = parseInt( a.value, 36 );
+  var sB = parseInt( b.value, 36 );
+
+  return sA - sB;
+}
+
+// Dual list move function
+function moveDualList( srcList, destList, moveAll ){
+  // Do nothing if nothing is selected
+  storeFixListValue(srcList, destList);
+  if (  ( srcList.selectedIndex == -1 ) && ( moveAll == false )   ){
+    return;
+  }
+  newDestList = new Array( destList.options.length );
+  var len = 0;
+  for( len = 0; len < destList.options.length; len++ ){
+    if ( destList.options[ len ] != null ){
+      newDestList[ len ] = new Option( destList.options[ len ].text, destList.options[ len ].value, destList.options[ len ].defaultSelected, destList.options[ len ].selected );
+    }
+  }
+
+  for( var i = 0; i < srcList.options.length; i++ ){ 
+    if ( srcList.options[i] != null && ( srcList.options[i].selected == true || moveAll ) ){
+       // Statements to perform if option is selected
+       // Incorporate into new list
+       newDestList[ len ] = new Option( srcList.options[i].text, srcList.options[i].value, srcList.options[i].defaultSelected, srcList.options[i].selected );
+       len++;
+    }
+  }
+
+  // Sort out the new destination list
+  newDestList.sort( compareOptionValues );   // BY VALUES
+
+  // Populate the destination with the items from the new array
+  for ( var j = 0; j < newDestList.length; j++ ){
+    if ( newDestList[ j ] != null ){
+      destList.options[ j ] = newDestList[ j ];
+    }
+  }
+  // Erase source list selected elements
+  for( var i = srcList.options.length - 1; i >= 0; i-- ){ 
+    if ( srcList.options[i] != null && ( srcList.options[i].selected == true || moveAll ) ){
+       // Erase Source
+       //srcList.options[i].value = "";
+       //srcList.options[i].text  = "";
+       srcList.options[i]       = null;
+    }
+  }
+} // End of moveDualList()
+
+function sendform(aform, srcList, destInput){
+	var r = new Array();
+  	for (var i = 0; i < srcList.options.length; i++)
+    if (srcList.options[i] != null){
+    	 r[r.length] = srcList.options[i].value;
+    }
+   	
+   	if(confirm('{ifsavenames}')){
+   		destInput.value = r;
+		aform.submit();
+	}
+}
+//  End -->
+</script>
+<!-- BEGIN block0 -->
+<div id="otitle">-- {title}  --<br /><br />{filetitle}</div>
+
+<form action="{action}" method="post" name="myform" id="myform">
+<input type="hidden" name="sbname" id="sbname">
+<div id="pagecenter">
+<table  border="0">
+	<tr>
+		<td align = "center">
+			<div id="otitle">{unreceivername}</div>
+			<select id="osetreceivers" multiple="multiple" size="35" width="20"  name="listleft">
+				<!-- BEGIN block01 -->{ureceiver}<!-- END block01 -->
+			</select>
+		</td>
+		<td >
+			<input id="osetreceb"  type="button" onclick="moveDualList(this.form.listleft, this.form.listright, false )" name="Add  >" value="{add}>" /><br />
+			<input id="osetreceb"  type="button" onclick="moveDualList(this.form.listright, this.form.listleft, false )" name="delete  <" value="{delete}<" /><br /><br /><br />
+ 			<input id="osetreceb"  type="button" onclick="moveDualList(this.form.listleft, this.form.listright, true )" name="Add All >>" value="{addall} >>" /><br />
+ 			<input id="osetreceb"  type="button" onclick="moveDualList(this.form.listright, this.form.listleft, true )" name="Del All <<" value="{delall} <<" /><br />
+		</td>
+		<td align = "center">
+			<div id="otitle">{receivername}</div>
+			<select  id="osetreceivers" multiple="multiple" size="35" width="20"  name="listright">
+				<!-- BEGIN block02 -->{receiver}<!-- END block02 -->
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="3"align="center">
+		<input  id="osetreceb" type="button" value="{ok}" onclick="sendform(this.form, this.form.listright, this.form.sbname)">
+			&nbsp;&nbsp;
+			<input  id="osetreceb" type="button" value="{reset}" onclick="restoreListValue(this.form.listleft, this.form.listright)">
+		</td>
+	</tr>
+</table>
+</div>
+<p />
+</form>
+<!-- END block0 -->

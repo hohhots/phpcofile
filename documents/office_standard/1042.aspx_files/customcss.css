@@ -1,0 +1,40 @@
+PRE {
+	background-color: #FFFEF8;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #C0C0C0;
+	font-family: Courier New, monospace;
+}
+.Indent {
+	margin-left: 16px;
+	margin-right: 16px;
+font-style: normal;
+}
+P {
+	line-height: 20px;
+	text-indent: 24px;
+}
+BlendDiv {
+ background-color:transparent;filter:BlendTrans();
+}
+.postText {
+font-family: 宋体; 
+font-size: 12px; 
+line-height: 150%;
+}
+
+
+	body.xzArticle			{ font-family: 宋体; font-size: 12px; text-indent: 24px; text-align: left; line-height: 150% }	
+	p.xzArticle				{ margin-top:6px; margin-bottom:6px }	
+	p.xzArticle_Title		{ margin-top:24px; margin-bottom:6px }	
+	p.xzArticle_Title1		{ font-family: 黑体; font-size: 12px; margin-top:24px; margin-bottom:6px }	
+	p.xzArticle_Title2		{ font-family: 黑体; font-size: 14px; margin-top:24px; margin-bottom:6px }	
+	p.xzArticle_Title3		{ font-family: 黑体; font-size: 16px; margin-top:24px; margin-bottom:6px }	
+	span.xzArticle_notify	{ font-weight: bold }
+	blockquote.xzArticle	{ font-style : normal }
+	hr.xzArticle_hr1 			{ width: 95%;}
+	hr.xzArticle_hr2 			{ width: 90%; }
+	hr.xzArticle_hr3 			{ width: 85%; }
+	hr.xzArticle_hr4 			{ width: 80%; }
+	ol.xzArticle			{ margin-top:6px; margin-bottom:6px }
+	#xzArticle_DocTitle		{ font-family: 黑体}
